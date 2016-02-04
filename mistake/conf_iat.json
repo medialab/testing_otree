@@ -1,0 +1,24 @@
+{
+    "frame":{
+        "name":"trustworthy",
+        "concepts_stimuli":[
+            {"concept":"trustworthy","stimuli":["t1","t2"]},
+            {"concept":"untrustworthy","stimuli":["u1","u2"]}
+        ],
+        "stimuli_sequence":[0,0,0,0,1,1,1,1,0,1,0,1]
+    },
+    "extras":[
+        { 
+            "name":"governement",
+            "concepts_stimuli":{"concept":"governement","stimuli":["g1","g2"]},
+            "stimuli_sequence_right":[0,0,0,0,1,1,1,1,0,1,0,1],
+            "stimuli_sequence_left":[0,0,0,0,1,1,1,1,0,1,0,1]
+        },
+        { 
+            "name":"judicial",
+            "concepts_stimuli":{"concept":"judicial systems","stimuli":["j1","j2"]},
+            "stimuli_sequence_right":[0,0,0,0,1,1,1,1,0,1,0,1],
+            "stimuli_sequence_left":[0,0,0,0,1,1,1,1,0,1,0,1]
+        },
+    ]
+}
