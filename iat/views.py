@@ -9,7 +9,11 @@ from .models import Constants
 
 
 class IAT(Page):
-    pass
+    form_model = models.Player
+    form_fields = ['iat_results']
+
+    def before_next_page(self):
+        print self.player.iat_results
 
 
 page_sequence = [

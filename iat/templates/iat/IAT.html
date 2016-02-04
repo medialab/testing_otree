@@ -5,16 +5,25 @@
     IAT
 {% endblock %}
 
+{% block scripts %}
+  <script type="text/javascript">
+
+  $(function() {
+    var data = {{ Constants.conf|safe }};
+    $('input[name="iat_results"]').val(JSON.stringify(data));
+    console.log($('input[name="iat_results"]').val());
+  });
+
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.2.0/lodash.min.js"></script>
+  <!--<script type="text/javascript" src={% static "iat/iat.js" %}></script>-->
+{% endblock %}
+
 {% block content %}
 
-<!--
-Documentation on how to write a django template here:
-https://docs.djangoproject.com/en/dev/topics/templates/
-
-Bootstrap comes pre-loaded, so you can use any Bootstrap elements:
-http://getbootstrap.com/components/
-
--->
+    <input type="hidden" name="iat_results" />
+    <div id="iat">Rendering...</div>
 
     {% next_button %}
 

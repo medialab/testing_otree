@@ -13,6 +13,7 @@ from otree.models import BaseSubsession, BaseGroup, BasePlayer
 # </standard imports>
 
 import json
+from jsonfield import JSONField
 
 author = 'Your name here'
 
@@ -23,7 +24,9 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'iat'
-    conf = json.load("conf_iat.json")
+    conf = open('iat/conf_iat.json', 'r').read()
+    num_rounds = 1
+    players_per_group = None
 
 class Subsession(BaseSubsession):
     pass
@@ -31,5 +34,5 @@ class Subsession(BaseSubsession):
 class Group(BaseGroup):
     pass
 
-class Player(BasePlayer):    
-    iat_results=models.JsonField()
+class Player(BasePlayer):
+    iat_results=JSONField()

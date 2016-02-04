@@ -111,7 +111,14 @@ SESSION_CONFIG_DEFAULTS = {
 }
 
 
-SESSION_CONFIGS = []
+SESSION_CONFIGS = [
+    {
+        'name': 'iat',
+        'display_name': 'IAT',
+        'num_demo_participants': 10,
+        'app_sequence': ['iat']
+    }
+]
 
 # don't put anything after this line.
 otree.settings.augment_settings(globals())
